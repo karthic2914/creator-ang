@@ -1,0 +1,30 @@
+<div class="container">
+  <div *ngFor="let i of makers">
+      <div class="marker">
+        <span> <b><label for="Name">Name</label></b> :  {{ i.name }}  || </span>
+        <span> <b><label for="model">Maker</label></b>  {{ i.inventor }}  || </span>
+        <span> <b><label for="model">Year</label></b> {{ i.year }}  </span>
+        <span> <button class="btn btn-primary" (click)="details(i.id)"> details </button> </span>
+      </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xl-12">
+      <div class="marker-creator">
+       <fieldset class="form-group">
+          <label for="nameModel">{{ nameModel }}</label>
+          <input type="text" [(ngModel)]="nameModel" class="form-control" placeholder="Enter Name">
+        </fieldset>
+        <fieldset class="form-group">
+          <label for="invertor">{{ inventorModel }}</label>
+          <input type="text" [(ngModel)]="inventorModel" class="form-control" placeholder="Enter Invertor">
+        </fieldset>
+        <fieldset class="form-group">
+          <label for="nameModel">{{ yearModel }}</label>
+          <input type="text" [(ngModel)]="yearModel" class="form-control" placeholder="Enter Year">
+        </fieldset>
+        <button type="submit" (click)="createMakers()" class="btn btn-primary">Create Makers</button>
+        </div>
+      </div>
+  </div>
+</div>
